@@ -1,0 +1,140 @@
+/* ─── GLOBAL LAYOUT ───────────────────────────────── */
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ─── CENTER SECTION (HOME / HERO) ───────────────── */
+
+#center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* ─── SIMPLE HERO (OPTIONNEL) ───────────────────── */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ─── COUNTER (si utilisé) ───────────────────────── */
+
+.counter {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--bg-3);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.counter:hover {
+  border-color: var(--border-strong);
+  background: var(--bg-2);
+}
+
+/* ─── NEXT STEPS / SECTION GRID ─────────────────── */
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+}
+
+#next-steps > div {
+  flex: 1;
+  padding: 40px 28px;
+}
+
+@media (max-width: 1024px) {
+  #next-steps {
+    flex-direction: column;
+  }
+
+  #next-steps > div {
+    padding: 28px 20px;
+  }
+}
+
+/* ─── DOCS SECTION ─────────────────────────────── */
+
+#docs {
+  border-right: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+  #docs {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+/* ─── LINKS LIST ───────────────────────────────── */
+
+#next-steps ul {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+#next-steps ul li {
+  list-style: none;
+}
+
+#next-steps ul a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#next-steps ul a:hover {
+  background: var(--bg-3);
+  border-color: var(--border-strong);
+}
+
+/* ─── SPACER ───────────────────────────────────── */
+
+#spacer {
+  height: 80px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+  #spacer {
+    height: 40px;
+  }
+}
+
+/* ─── CLEAN DIVIDER (remplace ticks) ───────────── */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 40px 0;
+}
+
+/* ─── REMOVE OLD EFFECTS ───────────────────────── */
+
+/* On supprime complètement les effets inutiles */
+.ticks {
+  display: none;
+}
